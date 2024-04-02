@@ -6,11 +6,17 @@ function ArticleList(){
     const posts = blogData.posts
     const articleList =posts.map((post) =>{
         return(
-            <Article title={post.title} date={post.date} preview={post.preview}/>
+    
+            <Article key={post.id} title={post.title} date={post.date} preview={post.preview}/>
+            
         )
         
     })
-    return articleList
+    return (
+    <main>
+    {articleList}
+    </main>
+    )
 }
 
 export default ArticleList
